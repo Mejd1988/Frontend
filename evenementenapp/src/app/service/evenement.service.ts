@@ -14,7 +14,7 @@ export class EvenementService {
 
    }
 
-  findAll(): Observable<Evenement[]> {
+  public findAll(): Observable<Evenement[]> {
     return this.httpClient.get<Evenement[]>("http://localhost:8080/evenement");
   }
 }
