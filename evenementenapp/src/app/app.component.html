@@ -1,9 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  
+<h1 class="title">Evenement App</h1>
+<nav>
+  <a routerLink="/artiest" routerLinkActive="active">Artiest</a>
+  <a routerLink="/evenement" routerLinkActive="active">Evenement</a>
+  <a routerLink="/agenda" routerLinkActive="active">Agenda</a>
+  <a routerLink="/gebruiker" routerLinkActive="active">Gebruiker</a>
+  <a routerLink="/locatie" routerLinkActive="active">Locatie</a>
+  <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
+</nav>
+<div [@routeAnimation]="getAnimationData(routerOutlet)">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
 </div>
-
-<router-outlet></router-outlet>
+<router-outlet name="popup"></router-outlet>
