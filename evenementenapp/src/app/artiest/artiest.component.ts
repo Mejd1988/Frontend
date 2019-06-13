@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Artiest } from '../domain/artiest';
+import { ArtiestService } from '../service/artiest.service';
 
 @Component({
   selector: 'app-artiest',
@@ -7,11 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtiestComponent implements OnInit {
 
- 
-
-  ngOnInit() {
-
-   
+  
+    artiest: Artiest[];
+  
+    constructor(private artiestService: ArtiestService) { }
+  
+    ngOnInit() {
+  
+      this.artiestService.findAll().subscribe(result => {
+          this.artiest = result;
+      });
+      console.log(this.artiestService);
+    }
+  
   }
-
-}
