@@ -5,7 +5,7 @@ import { ArtiestComponent } from './artiest/artiest.component';
 
 const routes: Routes = [
   {
-    path: 'evenementen',
+    path: 'evenement',
     component: EvenementComponent
   },
   {
