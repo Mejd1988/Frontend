@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { GebruikerService } from '../service/gebruiker.service';
+import { Gebruiker } from '../domain/gebruiker';
+
 
 @Component({
   selector: 'app-gebruiker',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GebruikerComponent implements OnInit {
 
-  constructor() { }
+  gebruiker: Gebruiker[];
+    
+  constructor(private gebruikerService: GebruikerService) { }
 
   ngOnInit() {
+
+    this.gebruikerService.findAll().subscribe(result => {
+        this.gebruiker = result;
+    });
+    console.log(this.gebruikerService);
   }
 
 }

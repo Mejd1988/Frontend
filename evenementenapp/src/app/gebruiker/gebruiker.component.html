@@ -1,3 +1,26 @@
-<p>
-  gebruiker works!
-</p>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  table#t01 {
+    width: 100%;    
+    background-color: #f1f1c1;
+  }
+  </style>
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>naam</th>
+    </tr>
+  </thead>
+    <tr *ngFor = "let gebruiker of gebruiker"> 
+      <td>{{gebruiker.id}}</td>
+      <td>{{gebruiker.naam}}</td>
+    </tr>
+</table>

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EvenementComponent } from './evenement/evenement.component';
 import { ArtiestComponent } from './artiest/artiest.component';
+import { EvenementenAgendaComponent } from './evenementen-agenda/evenementen-agenda.component';
+import { GebruikerComponent } from './gebruiker/gebruiker.component';
 
 const routes: Routes = [
   {
@@ -11,6 +13,14 @@ const routes: Routes = [
   {
     path: 'artiest',
     component: ArtiestComponent
+  },
+  {
+    path: 'agenda',
+    component: EvenementenAgendaComponent
+  },
+  {
+    path: 'gebruiker',
+    component: GebruikerComponent
   }
 
 ];
