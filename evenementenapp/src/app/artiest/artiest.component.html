@@ -1,12 +1,15 @@
 
-<div *ngIf="artiest">
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
 
-  <h2>{{artiest.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{artiest.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="artiest.name" placeholder="name"/>
-    </label>
-  </div>
-
-</div>
+      <th>naam</th>
+    </tr>
+  </thead>
+    <tr *ngFor = "let artiest of artiest"> 
+      <td>{{artiest.id}}</td>
+      
+      <td>{{artiest.naam}}</td>
+    </tr>
+</table>
