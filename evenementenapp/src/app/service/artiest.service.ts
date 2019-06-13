@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Artiest } from '../domain/artiest';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArtiestService {
 
-  constructor() { }
+  // private httpClient: HttpClient (door constructor)
+
+  constructor(private httpClient: HttpClient) {
+
+   }
+
+  findAll(): Observable<Artiest[]> {
+    return this.httpClient.get<Artiest[]>("http://localhost:8080/artiest");
+  }
 }

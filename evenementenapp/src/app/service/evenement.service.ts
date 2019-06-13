@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Evenement } from '../domain/evenement';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EvenementService {
 
-  constructor() { }
+  // private httpClient: HttpClient (door constructor)
+
+  constructor(private httpClient: HttpClient) {
+
+   }
+
+  findAll(): Observable<Evenement[]> {
+    return this.httpClient.get<Evenement[]>("http://localhost:8080/evenement");
+  }
 }
