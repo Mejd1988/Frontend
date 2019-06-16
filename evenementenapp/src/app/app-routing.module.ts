@@ -4,6 +4,7 @@ import { EvenementComponent } from './evenement/evenement.component';
 import { ArtiestComponent } from './artiest/artiest.component';
 import { EvenementenAgendaComponent } from './evenementen-agenda/evenementen-agenda.component';
 import { GebruikerComponent } from './gebruiker/gebruiker.component';
+import { LocatieComponent } from './locatie/locatie.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'gebruiker',
     component: GebruikerComponent
+  },
+  {
+    path: 'locatie',
+    component: LocatieComponent
   }
 
 ];
