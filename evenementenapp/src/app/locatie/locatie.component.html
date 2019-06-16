@@ -1,3 +1,28 @@
-<p>
-  locatie works!
-</p>
+<style>
+  table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  th, td {
+  
+  
+    background-color: #f1f1f1;
+  }
+  table#t01 {
+    width: 100%;    
+    background-color: #ffffff;
+  }
+  </style>
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>naam</th>
+    </tr>
+  </thead>
+    <tr *ngFor = "let locatie of locatie"> 
+      <td>{{locatie.id}}</td>
+      <td>{{locatie.naam}}</td>
+    </tr>
+</table>

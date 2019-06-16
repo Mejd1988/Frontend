@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EvenementenAgenda } from '../domain/evenementen-agenda'
+import { EvenementenAgendaService } from '../service/evenementen-agenda.service';
 
 @Component({
   selector: 'app-evenementen-agenda',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EvenementenAgendaComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+      evenementenagenda: EvenementenAgenda[];
+    
+      constructor(private evenementenAgendaService: EvenementenAgendaService) { }
+    
+      ngOnInit() {
+    
+        this.evenementenAgendaService.findAll().subscribe(result => {
+            this.evenementenagenda = result;
+        });
+        console.log(this.evenementenAgendaService);
+      }
+    
+    }

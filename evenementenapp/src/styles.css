@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/* Navigation link styles */
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  nav a:visited, a:link {
+    color: rgb(139, 96, 96);
+  }
+  nav a:hover {
+    color: #03e516;
+    background-color: #CFD8DC;
+  }
+  nav a.active {
+    color: #0703e5;
+  }
