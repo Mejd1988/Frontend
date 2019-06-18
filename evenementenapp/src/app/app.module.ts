@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -14,6 +14,7 @@ import { GebruikerComponent } from './gebruiker/gebruiker.component';
 
 import { LocatieComponent } from './locatie/locatie.component';
 import { EvenementComponent } from './evenement/evenement.component';
+import { ToevoegenComponent } from './toevoegen/toevoegen.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { EvenementComponent } from './evenement/evenement.component';
     EvenementenAgendaComponent,
     GebruikerComponent,
     LocatieComponent,
-    EvenementComponent
+    EvenementComponent,
+    ToevoegenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
