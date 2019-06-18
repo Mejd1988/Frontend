@@ -15,7 +15,7 @@ export class ArtiestService {
 
    }
 
-  findAll(): Observable<Artiest[]> {
+  public findAll(): Observable<Artiest[]> {
     return this.httpClient.get<Artiest[]>("http://localhost:8080/artiest");
   }
 }
