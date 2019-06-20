@@ -1,14 +1,12 @@
-export class Evenement {
-    
-    constructor(
-        private _id: number, 
-        private _naam: string, 
-        private _toelichting: string, 
-        private _website: string) {
-    }
+import { Locatie } from './locatie';
 
-    get id() : number { return this._id}
-    get naam() : string { return this._naam}
-    get toelichting() : string { return this._toelichting}
-    get website() : string { return this._website}
+export class Evenement {
+
+
+    naam: string;
+    locatie : Locatie;
+    datum: string;
+    toelichting: string;
+    
+
 }
