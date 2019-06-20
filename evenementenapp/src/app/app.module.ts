@@ -15,6 +15,11 @@ import { GebruikerComponent } from './gebruiker/gebruiker.component';
 import { LocatieComponent } from './locatie/locatie.component';
 import { EvenementComponent } from './evenement/evenement.component';
 import { ToevoegenComponent } from './toevoegen/toevoegen.component';
+import { EvenementDetailsComponent } from './evenement-details/evenement-details.component';
+import { GebruikeraanmeldenComponent } from './gebruikeraanmelden/gebruikeraanmelden.component';
+import { GebruikerloginComponent } from './gebruikerlogin/gebruikerlogin.component';
+import { GebruikerpaginaComponent } from './gebruikerpagina/gebruikerpagina.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { ToevoegenComponent } from './toevoegen/toevoegen.component';
     GebruikerComponent,
     LocatieComponent,
     EvenementComponent,
-    ToevoegenComponent
+    ToevoegenComponent,
+    EvenementDetailsComponent,
+    GebruikeraanmeldenComponent,
+    GebruikerloginComponent,
+    GebruikerpaginaComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

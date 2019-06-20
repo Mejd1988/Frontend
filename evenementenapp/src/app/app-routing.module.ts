@@ -6,11 +6,22 @@ import { EvenementenAgendaComponent } from './evenementen-agenda/evenementen-age
 import { GebruikerComponent } from './gebruiker/gebruiker.component';
 import { LocatieComponent } from './locatie/locatie.component';
 import { ToevoegenComponent } from './toevoegen/toevoegen.component';
+import { EvenementDetailsComponent } from './evenement-details/evenement-details.component';
+import { GebruikeraanmeldenComponent } from './gebruikeraanmelden/gebruikeraanmelden.component';
+import { GebruikerpaginaComponent } from './gebruikerpagina/gebruikerpagina.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
   {
     path: 'evenement',
     component: EvenementComponent
+  },
+  { path: "gebruiker/nieuwegebruiker", component: GebruikeraanmeldenComponent },
+  { path: "gebruiker/gebruikerpagina", component: GebruikerpaginaComponent },
+  { path: 'home', component: MenuComponent },
+  { 
+    path: 'evenement/:evenementId',
+    component: EvenementDetailsComponent 
   },
   {
     path: 'artiest',

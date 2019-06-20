@@ -5,11 +5,9 @@
   table, th, td {
     border: 1px solid grey;
     border-collapse: collapse;
-    padding: 5px;
+    padding: 10px;
   }
   th, td {
-  
-  
     background-color: #f1f1f1;
   }
   table#t01 {
@@ -20,14 +18,18 @@
 <table>
   <thead>
     <tr>
-      <th>id</th>
-
+      <th>datum</th>
       <th>naam</th>
+      <th>locatie</th>
     </tr>
   </thead>
     <tr *ngFor = "let evenement of evenement"> 
-      <td>{{evenement.id}}</td>
-      
+      <td>{{evenement.datum}}</td>
       <td>{{evenement.naam}}</td>
+      <td>{{evenement.locatie}}</td>
+      <button (click)="details(evenement.id)">
+        details
+      </button>
     </tr>
+    
 </table>

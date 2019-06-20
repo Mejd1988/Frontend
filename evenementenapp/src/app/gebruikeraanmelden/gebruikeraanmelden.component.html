@@ -1,0 +1,29 @@
+<p>
+  Maak hier een nieuw account aan:
+</p>
+
+<form #formulier="ngForm" (ngSubmit)="versturen(formulier)">
+
+      <br><br>Gebruikersnaam:<br>
+    <input [(ngModel)]="gebruiker.gebruikersnaam"
+      name="Gebruikersnaam" required>
+
+  <br><br>Wachtwoord:<br>
+  <input type="password"  [(ngModel)]="gebruiker.wachtwoord"
+      name="wachtwoord" required>
+
+  <br><br>Herhaal het wachtwoord:<br>
+  <input type="password"  [(ngModel)]="wachtwoordcheck"
+      name="wachtwoord2" required>
+
+      <br><br>Woonplaats:<br>
+      <input [(ngModel)]="gebruiker.woonplaats"
+      name="Woonplaats" required>
+
+      <br><p style="color:red;">{{wwerror}}</p>
+  
+  <br><br><input type="submit" value="Volgende" 
+      [disabled]="formulier.invalid">
+</form>
+
+<router-outlet></router-outlet>

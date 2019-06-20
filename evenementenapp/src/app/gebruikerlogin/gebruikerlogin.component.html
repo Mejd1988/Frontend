@@ -1,0 +1,19 @@
+<p>
+  Log in met een bestaand account:
+</p>
+
+<form #formulier="ngForm" (ngSubmit)="versturen()">
+
+  <br>Gebruikersnaam:<br>
+  <input [(ngModel)]="gebruiker.gebruikersnaam"
+      name="email" required>
+
+  <br><br>Wachtwoord:<br>
+  <input type="password"  [(ngModel)]="gebruiker.wachtwoord"
+      name="wachtwoord" required>
+
+<br><p style="color:red;">{{foutmelding}}</p>
+
+  <br><br><input type="submit" value="Login" 
+      [disabled]="formulier.invalid">
+</form>
