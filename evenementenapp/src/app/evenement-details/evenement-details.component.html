@@ -3,7 +3,7 @@
   <p>{{ evenement.datum }}</p>
   <p>{{ evenement.toelichting }}</p>
 
-  <!-- <div *ngFor="let artiest of evenement">
+  <!-- <div *ngFor="let artiest of evenement.artiesten">
     <p>{{ artiest.naam }}</p>
   </div> -->
 
@@ -11,4 +11,9 @@
 
   <!-- <p>{{ evenement.artiesten }}</p> -->
   <p>{{ evenement.website }}</p>
+  <ol *ngFor="let artiest of evenement.artiesten">
+    <li>{{artiest.naam}}</li>
+  </ol>
+    
+  
 </div>

@@ -26,7 +26,7 @@
     <tr *ngFor = "let evenement of evenement"> 
       <td>{{evenement.datum}}</td>
       <td>{{evenement.naam}}</td>
-      <td>{{evenement.locatie}}</td>
+      <td>{{evenement.locatie.naam}}</td>
       <button (click)="details(evenement.id)">
         details
       </button>

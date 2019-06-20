@@ -1,4 +1,5 @@
 import { Locatie } from './locatie';
+import { Artiest } from './artiest';
 
 export class Evenement {
 
@@ -7,6 +8,8 @@ export class Evenement {
     locatie : Locatie;
     datum: string;
     toelichting: string;
+    website: string;
+    artiesten: Artiest[];
     
 
 }
