@@ -1,5 +1,5 @@
-<p>
-  gebruikerpagina works!
-</p>
 
-<a routerLink = "/">Log uit</a>
+<div *ngIf="loginService.actievegebruiker">
+    <p>Je bent ingelogd als:  {{loginService.actievegebruiker.gebruikersnaam}} </p>
+</div>
+  

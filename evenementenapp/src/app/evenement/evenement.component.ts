@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Evenement } from '../domain/evenement';
 import { EvenementService } from '../service/evenement.service';
 import { Router } from '@angular/router';
+import { LoginService } from '../service/login.service';
 
 @Component({
   selector: 'app-evenement',
@@ -12,7 +13,7 @@ export class EvenementComponent implements OnInit {
 
   evenement: Evenement[];
 
-  constructor(private evenementService: EvenementService, private router : Router) { }
+  constructor(private evenementService: EvenementService, private router : Router, private loginService: LoginService) { }
 
   ngOnInit() {
 

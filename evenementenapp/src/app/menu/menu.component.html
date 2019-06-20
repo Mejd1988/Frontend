@@ -4,5 +4,7 @@
   <a routerLink="/gebruiker" routerLinkActive="active">Gebruikers</a>
   <a routerLink="/locatie" routerLinkActive="active">Locaties</a>
   <a routerLink="/toevoegen" routerLinkActive="active">Toevoegen Evenement</a>
+  <a routerLink="/uitloggen" routerLinkActive="active" *ngIf="loginService.actievegebruiker">Uitloggen</a>
+  
   
 </div> 

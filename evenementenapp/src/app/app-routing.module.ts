@@ -10,6 +10,9 @@ import { EvenementDetailsComponent } from './evenement-details/evenement-details
 import { GebruikeraanmeldenComponent } from './gebruikeraanmelden/gebruikeraanmelden.component';
 import { GebruikerpaginaComponent } from './gebruikerpagina/gebruikerpagina.component';
 import { MenuComponent } from './menu/menu.component';
+import { GebruikerloginComponent } from './gebruikerlogin/gebruikerlogin.component';
+import { UitloggenComponent } from './uitloggen/uitloggen.component';
+import { EvenementGebruikerComponent } from './evenement-gebruiker/evenement-gebruiker.component';
 
 const routes: Routes = [
   {
@@ -17,8 +20,12 @@ const routes: Routes = [
     component: EvenementComponent
   },
   { path: "gebruiker/nieuwegebruiker", component: GebruikeraanmeldenComponent },
-  { path: "gebruiker/gebruikerpagina", component: GebruikerpaginaComponent },
-  { path: 'home', component: MenuComponent },
+  // { path: "gebruiker/gebruikerpagina", component: GebruikerpaginaComponent },
+  { path: "gebruiker/evenementen", component: EvenementGebruikerComponent },
+  
+  { path: "gebruiker/gebruikerlogin", component: GebruikerloginComponent },
+  { path: 'home', component: EvenementComponent },
+  { path: 'uitloggen', component: UitloggenComponent },
   { 
     path: 'evenement/:evenementId',
     component: EvenementDetailsComponent 

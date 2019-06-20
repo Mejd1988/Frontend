@@ -19,4 +19,10 @@ ngOnInit() {
     this.router.navigate(['gebruiker/gebruikerpagina']);
 }
 }
+
+logout(){
+  this.loginservice.logged = false;
+  this.loginservice.actievegebruiker.gebruikersnaam ='';
+
+}
 }
