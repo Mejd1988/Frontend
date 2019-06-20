@@ -1,0 +1,12 @@
+<div>
+    <form #form="ngForm" (ngSubmit)="submit(form)">
+      <br>
+      Naam evenement:     <br><input type="text" [(ngModel)]="formnaam"     name="naam">      <br><br>
+      Locatie:  <br>  <input type="text" [(ngModel)]="formlocatie"    name="locatie">     <br><br>
+      Datum:    <br> <input type="text" [(ngModel)]="formdatum"     name="datum">      <br><br>
+      Toelichting:    <br> <input type="text" [(ngModel)]="formtoelichting"     name="toelichting">      <br><br>
+
+                <button type="submit" value="Submit">Submit</button>
+    </form>
+  </div>
+  
