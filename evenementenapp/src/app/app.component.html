@@ -1,22 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1 class="title">Evenement App</h1>
+<h1 class="title">Evenementen App</h1>
 
-<div class="topnav">
-  <a routerLink="/evenement" routerLinkActive="active">Evenementen</a>
-  <a routerLink="/artiest" routerLinkActive="active">Artiesten</a>
-  <a routerLink="/agenda" routerLinkActive="active">Agenda</a>
-  <a routerLink="/gebruiker" routerLinkActive="active">Gebruikers</a>
-  <a routerLink="/locatie" routerLinkActive="active">Locaties</a>
-  <a routerLink="/toevoegen" routerLinkActive="active">Toevoegen</a>
-</div> 
+<app-menu></app-menu>
 
-<nav>
+<router-outlet></router-outlet>
 
-</nav>&nbsp;
-
-  <router-outlet #routerOutlet="outlet"></router-outlet>
-
-
-
-
-<router-outlet name="popup"></router-outlet>

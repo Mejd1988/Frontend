@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GebruikerService } from '../service/gebruiker.service';
 import { Gebruiker } from '../domain/gebruiker';
-
+import { Router } from '@angular/router';
+import { LoginService } from '../service/login.service';
 
 @Component({
   selector: 'app-gebruiker',
@@ -10,16 +11,12 @@ import { Gebruiker } from '../domain/gebruiker';
 })
 export class GebruikerComponent implements OnInit {
 
-  gebruiker: Gebruiker[];
-    
-  constructor(private gebruikerService: GebruikerService) { }
+  constructor(private router : Router, private loginservice : LoginService
+    ) { }
 
-  ngOnInit() {
-
-    this.gebruikerService.findAll().subscribe(result => {
-        this.gebruiker = result;
-    });
-    console.log(this.gebruikerService);
-  }
-
+ngOnInit() {
+  if(this.loginservice.actievegebruiker != null) {
+    this.router.navigate(['gebruiker/gebruikerpagina']);
+}
+}
 }
