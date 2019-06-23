@@ -9,6 +9,8 @@ import { Button } from 'protractor';
 import { Evenement } from '../domain/evenement';
 import { LocatieService } from '../service/locatie.service';
 import { Locatie } from '../domain/locatie';
+import { Artiest } from '../domain/artiest';
+import { ArtiestService } from '../service/artiest.service';
 
 @Component({
   selector: 'app-toevoegen',
@@ -17,18 +19,36 @@ import { Locatie } from '../domain/locatie';
 })
 export class ToevoegenComponent implements OnInit {
 
-  @Input() FormData = { datum: '', naam: '', locatie: '' }
+  @Input() FormData = { datum: '', naam: '', locatie: '' , artiest: ''}
   constructor(private toevoegenService: ToevoegenService,
-    private locatieService: LocatieService) { }
+    private locatieService: LocatieService,
+    private artiestService: ArtiestService) {}
+    
 
   evenement: Evenement;
   locatie: Locatie;
+  artiest: Artiest;
 
   ngOnInit() {
   }
 
   submit(form: any) {
     // this.evenement = form.value;
+
+    let artiest = new Artiest();
+    artiest.naam = form.value.artiest;
+
+    this.artiestService.create(artiest).subscribe(
+      (data: any) => {
+        this.artiest = data;
+        let evenement = new Evenement();
+        evenement.naam = form.value.naam;
+        evenement.locatie = form.value.locatie;
+        evenement.datum = form.value.datum;
+        evenement.toelichting = form.value.toelichting;
+        evenement.artiest = form.value.artiest;
+      }
+    )
     console.log(form.value);
     let locatie = new Locatie();
     locatie.naam = form.value.locatie;
@@ -41,6 +61,7 @@ export class ToevoegenComponent implements OnInit {
         evenement.locatie = this.locatie;
         evenement.datum = form.value.datum;
         evenement.toelichting = form.value.toelichting;
+        evenement.artiest = form.value.artiest;
 
         this.toevoegenService.create(evenement).subscribe(
           (data: Evenement) => {
