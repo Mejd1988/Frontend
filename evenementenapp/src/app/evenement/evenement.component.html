@@ -27,9 +27,16 @@
       <td>{{evenement.datum}}</td>
       <td>{{evenement.naam}}</td>
       <td>{{evenement.locatie.naam}}</td>
+      <td *ngIf="loginService.actievegebruiker"> {{loginService.actievegebruiker.gebruikersnaam}}</td>
       <button (click)="details(evenement.id)">
         details
       </button>
+      
+
+    
+
     </tr>
+
+  
     
 </table>

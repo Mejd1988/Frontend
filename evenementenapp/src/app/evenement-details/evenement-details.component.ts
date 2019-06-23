@@ -22,6 +22,7 @@ export class EvenementDetailsComponent implements OnInit {
     )
     console.log(this.evenement);
   }
+  
   getEvenementDetails(evenementId: number): void {
     console.log(evenementId);
     this.evenementService.findById(evenementId).subscribe(
@@ -29,9 +30,6 @@ export class EvenementDetailsComponent implements OnInit {
       (error: any) => console.log(error),
       () => console.log("Gereed")
     )
-    
   }
-
-  
 }
 

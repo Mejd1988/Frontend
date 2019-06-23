@@ -1,0 +1,36 @@
+
+<p>
+  </p>
+  <style>
+    table, th, td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+    th, td {
+      background-color: #f1f1f1;
+    }
+    table#t01 {
+      width: 100%;    
+      background-color: #ffffff;
+    }
+    </style>
+    <div *ngIf="gebruiker">
+  <table>
+    <thead>
+      <tr>
+        <th>datum</th>
+        <th>naam</th>
+        <th>locatie</th>
+      </tr>
+    </thead>
+      <tr *ngFor = "let evenement of gebruiker.evenementenBezoeken "> 
+        <td>{{evenement.datum}}</td>
+        <td>{{evenement.naam}}</td>
+        <td>{{evenement.locatie.naam}}</td>
+      </tr>
+  </table>
+</div>
+<!-- <pre>
+    {{gebruiker|json}}
+</pre> -->

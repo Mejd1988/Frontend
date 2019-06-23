@@ -20,6 +20,8 @@ import { GebruikeraanmeldenComponent } from './gebruikeraanmelden/gebruikeraanme
 import { GebruikerloginComponent } from './gebruikerlogin/gebruikerlogin.component';
 import { GebruikerpaginaComponent } from './gebruikerpagina/gebruikerpagina.component';
 import { MenuComponent } from './menu/menu.component';
+import { UitloggenComponent } from './uitloggen/uitloggen.component';
+import { EvenementGebruikerComponent } from './evenement-gebruiker/evenement-gebruiker.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MenuComponent } from './menu/menu.component';
     GebruikeraanmeldenComponent,
     GebruikerloginComponent,
     GebruikerpaginaComponent,
-    MenuComponent
+    MenuComponent,
+    UitloggenComponent,
+    EvenementGebruikerComponent
   ],
   imports: [
     BrowserModule,

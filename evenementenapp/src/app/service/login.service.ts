@@ -12,7 +12,8 @@ export class LoginService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   
-  actievegebruiker : Gebruiker;
+  actievegebruiker : Gebruiker = null;
+  logged: boolean;
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +24,8 @@ export class LoginService {
 
     console.log(`http://localhost:8080/gebruiker/login`);
     console.log(gebruiker);
+
+    console.log(this.logged);
 
   return this.http.put<Gebruiker>(`http://localhost:8080/gebruiker/login`,
         gebruiker, this.httpOptions)

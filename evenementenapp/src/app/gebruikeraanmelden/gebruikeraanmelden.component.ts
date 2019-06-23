@@ -34,7 +34,7 @@ export class GebruikeraanmeldenComponent implements OnInit {
     this.gebruikerService.create(this.gebruiker).subscribe(
         gebruiker  => { console.log(gebruiker) },
         error =>  {//this.wwerror = error.message,//console.log(error.message),
-          if (error.message = "Http failure response for http://localhost:8080//account/createAccount: 409 OK") {
+          if (error.message = "Http failure response for http://localhost:8080//gebruiker/aanmakenGebruiker: 409 OK") {
             this.wwerror = "Dit e-mail adres bestaat al in onze database."
         }//} else {
           //  this.router.navigate(['account'] )

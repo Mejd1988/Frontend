@@ -10,8 +10,6 @@ import { Evenement } from '../domain/evenement';
 import { LocatieService } from '../service/locatie.service';
 import { Locatie } from '../domain/locatie';
 
-
-
 @Component({
   selector: 'app-toevoegen',
   templateUrl: './toevoegen.component.html',

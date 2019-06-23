@@ -7,6 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class GebruikerService {
+ 
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -25,4 +26,10 @@ export class GebruikerService {
   return this.httpClient.post<Gebruiker>(`http://localhost:8080/gebruiker/aanmakenGebruiker`,
       gebruiker, this.httpOptions)
 }
+
+findById(id: number) : Observable<Gebruiker> {
+  return this.httpClient.get<Gebruiker>(`http://localhost:8080/gebruiker/${id}`);
+}
+
+
 }

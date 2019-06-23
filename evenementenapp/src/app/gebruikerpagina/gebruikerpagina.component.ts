@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../service/login.service';
 
 @Component({
   selector: 'app-gebruikerpagina',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GebruikerpaginaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public loginService : LoginService) { }
 
   ngOnInit() {
+    
   }
+
 
 }

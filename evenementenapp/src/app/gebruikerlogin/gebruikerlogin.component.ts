@@ -13,7 +13,7 @@ export class GebruikerloginComponent implements OnInit {
   gebruiker : Gebruiker = new Gebruiker();
 
   constructor(private route: ActivatedRoute,
-    private loginservice: LoginService,
+    public loginservice: LoginService,
     private router: Router) { }
 
     ngOnInit() {
@@ -23,13 +23,14 @@ export class GebruikerloginComponent implements OnInit {
 
   versturen() {
     this.loginservice.loginUser(this.gebruiker.gebruikersnaam, this.gebruiker.wachtwoord).subscribe(
-      account  => { 
+      (account: Gebruiker)  => { 
         this.loginservice.actievegebruiker = account; 
         console.log(account);
+        this.loginservice.logged = true;
        },
       error => {console.log(error.message);
         this.foutmelding = "Het emailadres is niet bekend of het wacthwoord is verkeed."},
-      () => this.router.navigate(['gebruiker/gebruikerpagina'] )
+      () => this.router.navigate(['gebruiker/evenementen'] )
     )
   }
 
